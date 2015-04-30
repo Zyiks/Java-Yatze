@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="376.0" prefWidth="416.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="yatze.FXMLDocumentController">
+  <children>
+    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+    <ImageView fx:id="dice1" fitHeight="65.0" fitWidth="65.0" layoutX="26.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../pildid/questionmark.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="dice5" fitHeight="65.0" fitWidth="65.0" layoutX="327.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../pildid/questionmark.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="dice2" fitHeight="65.0" fitWidth="65.0" layoutX="98.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../pildid/questionmark.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="dice3" fitHeight="65.0" fitWidth="65.0" layoutX="175.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../pildid/questionmark.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="dice4" fitHeight="65.0" fitWidth="65.0" focusTraversable="false" layoutX="250.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../pildid/questionmark.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="317.0" layoutY="160.0" prefHeight="24.0" prefWidth="85.0" text="Veeretusi järel:" />
+    <Label fx:id="veeretusteArv" layoutX="386.0" layoutY="189.0" prefWidth="12.0" text="3" />
+    <CheckBox fx:id="hoia1" layoutX="37.0" layoutY="104.0" mnemonicParsing="false" text="Hoia" />
+    <CheckBox fx:id="hoia2" layoutX="109.0" layoutY="104.0" mnemonicParsing="false" text="Hoia" />
+    <CheckBox fx:id="hoia3" layoutX="186.0" layoutY="104.0" mnemonicParsing="false" text="Hoia" />
+    <CheckBox fx:id="hoia4" layoutX="261.0" layoutY="104.0" mnemonicParsing="false" text="Hoia" />
+    <CheckBox fx:id="hoia5" layoutX="340.0" layoutY="104.0" mnemonicParsing="false" text="Hoia" />
+    <Button fx:id="rollButton" layoutX="317.0" layoutY="187.0" mnemonicParsing="false" onAction="#veereta" text="Veereta" />
+    <Label layoutX="320.0" layoutY="316.0" text="Kokku:" />
+    <Label fx:id="ones" layoutX="95.0" layoutY="138.0" text="0" />
+    <Label fx:id="twos" layoutX="95.0" prefWidth="9.0" text="0" AnchorPane.topAnchor="168.0" />
+    <Label fx:id="threes" layoutX="95.0" text="0" AnchorPane.topAnchor="195.0" />
+    <Label fx:id="fours" layoutX="95.0" text="0" AnchorPane.topAnchor="228.0" />
+    <Label fx:id="fives" layoutX="95.0" layoutY="258.0" text="0" />
+    <Label fx:id="sixes" layoutX="95.0" layoutY="285.0" text="0" />
+    <Label fx:id="totalNumbers" layoutX="52.0" layoutY="332.0" text="0" />
+    <Label fx:id="bonus" layoutX="157.0" layoutY="316.0" prefWidth="12.000099999997474" text="0" />
+    <Label id="onePair" fx:id="kolmPaar" layoutX="279.0" layoutY="138.0" text="0" />
+    <Label id="twoPair" fx:id="neliPaar" layoutX="279.0" layoutY="165.0" text="0" />
+    <Label id="fourPair" fx:id="maja" layoutX="279.0" layoutY="198.0" text="0" />
+    <Label id="house" fx:id="smallStraight" layoutX="279.0" layoutY="228.0" text="0" />
+    <Label id="smallStraight" fx:id="bigStraight" layoutX="279.0" layoutY="258.0" text="0" />
+    <Label id="bigStraight" fx:id="Yatzi" layoutX="279.0" layoutY="288.0" text="0" />
+    <Label id="chance" fx:id="chance2" layoutX="279.0" layoutY="316.0" text="0" />
+    <Label id="ones" fx:id="totalSum" layoutX="368.0" layoutY="316.0" text="0" />
+    <Label layoutX="26.0" layoutY="4.0" text="Täringud:">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Label>
+    <Button fx:id="onesButton" layoutX="9.0" layoutY="136.0" mnemonicParsing="false" onAction="#ones" prefWidth="65.0" text="Ühed" />
+    <Button fx:id="twosButton" layoutX="10.0" layoutY="166.0" mnemonicParsing="false" onAction="#twos" prefWidth="65.0" text="Kahed" />
+    <Button fx:id="threesButton" layoutX="10.0" layoutY="196.0" mnemonicParsing="false" onAction="#threes" prefWidth="65.0" text="Kolmed" />
+    <Button fx:id="fivesButton" layoutX="9.0" mnemonicParsing="false" onAction="#fives" prefWidth="65.0" text="Viied" AnchorPane.topAnchor="256.0" />
+    <Button fx:id="foursButton" layoutX="9.0" mnemonicParsing="false" onAction="#fours" prefWidth="65.0" text="Neljad" AnchorPane.topAnchor="226.0" />
+    <Button fx:id="sixesButton" layoutX="9.0" mnemonicParsing="false" onAction="#sixes" prefWidth="65.0" text="Kuued" AnchorPane.topAnchor="286.0" />
+    <Label layoutX="9.0" layoutY="316.0" text="Boonus(alates 63 punktist):" />
+    <Label layoutX="10.0" layoutY="332.0" text="Kokku:" />
+    <Button fx:id="onePairButton" layoutX="134.0" layoutY="136.0" mnemonicParsing="false" onAction="#onePair" prefWidth="111.0" text="Kolm paar" />
+    <Button fx:id="twoPairButton" layoutX="134.0" layoutY="167.0" mnemonicParsing="false" onAction="#twoPair" prefWidth="111.0" text="Neli Paar" />
+    <Button fx:id="majaButton" layoutX="134.0" layoutY="196.0" mnemonicParsing="false" onAction="#house" prefWidth="111.0" text="Maja" />
+    <Button fx:id="smallStraightButton" layoutX="134.0" layoutY="226.0" mnemonicParsing="false" onAction="#smallStraight" prefWidth="111.0" text="Väike sirge" />
+    <Button fx:id="bigStraightButton" layoutX="134.0" layoutY="256.0" mnemonicParsing="false" onAction="#bigStraight" prefWidth="111.0" text="Suur sirge" />
+    <Button fx:id="yatzyButton" layoutX="134.0" layoutY="286.0" mnemonicParsing="false" onAction="#yatzy" prefWidth="111.0" text="Yatzy(Viis Paar)" />
+    <Button id="chance" fx:id="chanceButton" layoutX="175.0" layoutY="314.0" mnemonicParsing="false" onAction="#chance" prefWidth="83.0" text="Juhuslik" />
+  </children>
+</AnchorPane>
